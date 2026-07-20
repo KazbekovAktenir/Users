@@ -4,8 +4,7 @@ import { Success } from "./components/Success";
 import { Users } from "./components/Users";
 import { API } from "./helpers/const";
 
-// Тут список пользователей: https://reqres.in/api/users
-
+// Тут список пользователей: https://jsonplaceholder.typicode.com/users
 function App() {
   const [users, setUsers] = useState([]);
   const [invites, setInvites] = useState([]);
@@ -17,7 +16,7 @@ function App() {
     fetch(`${API}`)
       .then((res) => res.json())
       .then((json) => {
-        setUsers(json.data);
+        setUsers(json || []);
       })
       .catch((err) => {
         console.warn(err);

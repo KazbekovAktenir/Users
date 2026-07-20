@@ -1,1 +1,1 @@
-export const API = "https://reqres.in/api/users";
+export const API = "https://jsonplaceholder.typicode.com/users";
